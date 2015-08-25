@@ -8,10 +8,7 @@
 <TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:gravity="center"
-    android:textSize="28sp"
-    android:background="#00FF00"
-    android:padding="4sp"
+    style="@style/ActivityTitle"
     android:text="手机卫士" />
 
     <com.benny.mobilesafe.widget.MarqueeTextView

@@ -3,9 +3,22 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-      <!-- <item name="windowActionBar">false</item>-->
-   <!--     <item name="windowActionBar">false</item>
-        <item name="android:windowNoTitle">true</item>-->
+        <!-- <item name="windowActionBar">false</item>-->
+        <!--     <item name="windowActionBar">false</item>
+             <item name="android:windowNoTitle">true</item>-->
+    </style>
+
+    <style name="ActivityTitle">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:background">#00FF00</item>
+        <item name="android:padding">4sp</item>
+    </style>
+
+    <style name="ContentText">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#666</item>
+        <item name="android:layout_margin">4sp</item>
     </style>
 
 </resources>

@@ -1,8 +1,10 @@
 package com.benny.mobilesafe.activity;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageInstaller;
 import android.content.pm.PackageManager;
@@ -13,6 +15,8 @@ import android.os.Handler;
 import android.os.Message;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -74,8 +78,13 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         /*requestWindowFeature(Window.FEATURE_NO_TITLE);*/
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_splash);
+
+        //设置渐变动画
+        AlphaAnimation alphaAnimation = new AlphaAnimation(0,1);
+        alphaAnimation.setDuration(2000);
+        findViewById(R.id.rl_splashBg).startAnimation(alphaAnimation);
+
         tvVersion = (TextView) findViewById(R.id.tv_version);
         pb_Download = (ProgressBar) findViewById(R.id.pb_Download);
         PackageManager pm = getPackageManager();
@@ -86,8 +95,13 @@ public class SplashActivity extends AppCompatActivity {
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
-
-        checkUpdate();
+        SharedPreferences sharedPreferences= getSharedPreferences("setting", Context.MODE_PRIVATE);
+        boolean autoUpdate=   sharedPreferences.getBoolean("AutoUpdate",false);
+        if(autoUpdate) {
+            checkUpdate();
+        }else {
+            handler.sendEmptyMessageDelayed(CODE_ENTERHOME,2000);
+        }
     }
 
 
@@ -191,15 +205,10 @@ public class SplashActivity extends AppCompatActivity {
                             long now = SystemClock.currentThreadTimeMillis();
                             if (now - time < 2000) Thread.sleep(2000-(now - time));
 
-                            Message msg = Message.obtain();
-                            msg.what = CODE_ENTERHOME;
-                            handler.sendMessage(msg);
+                            handler.sendEmptyMessage(CODE_ENTERHOME);
                         }
                     } else {
-
-        Message msg = Message.obtain();
-                        msg.what = CODE_ERROR;
-                        handler.sendMessage(msg);
+                        handler.sendEmptyMessage(CODE_ERROR);
                     }
 
 
@@ -207,9 +216,7 @@ public class SplashActivity extends AppCompatActivity {
                 } catch (Exception e) {
                     e.printStackTrace();
 
-                    Message msg = Message.obtain();
-                    msg.what = CODE_ERROR;
-                    handler.sendMessage(msg);
+                    handler.sendEmptyMessage(CODE_ERROR);
                 }
 } }.start();
 

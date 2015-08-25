@@ -5,8 +5,8 @@
     android:versionName="1.0" >
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -15,15 +15,40 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".activity.SplashActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".activity.HomeActivity"
             android:label="@string/title_activity_home" >
+        </activity>
+        <activity
+            android:name=".activity.SettingActivity"
+            android:label="@string/title_activity_setting" >
+        </activity>
+        <activity
+            android:name=".activity.MobileSafeWizard1Activity"
+            android:label="@string/title_activity_mobile_safe_wizard1" >
+        </activity>
+        <activity
+            android:name=".activity.MobileSafeWizard2Activity"
+            android:label="@string/title_activity_mobile_safe_wizard2" >
+        </activity>
+        <activity
+            android:name=".activity.MobileSafeWizard3Activity"
+            android:label="@string/title_activity_mobile_safe_wizard3" >
+        </activity>
+        <activity
+            android:name=".activity.MobileSafeWizard4Activity"
+            android:label="@string/title_activity_mobile_safe_wizard4" >
+        </activity>
+        <activity
+            android:name=".activity.MobileSafeActivity"
+            android:label="@string/title_activity_mobile_safe" >
         </activity>
     </application>
 
