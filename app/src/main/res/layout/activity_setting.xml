@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:my="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ActivityTitle"
+        android:text="系统设置"/>
+
+    <com.benny.mobilesafe.view.SetingItem
+        android:id="@+id/mv_autoUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        my:itemTitle="自动更新"
+        my:descOn="自动更新打开"
+        my:descOff="自动更新关闭">
+
+    </com.benny.mobilesafe.view.SetingItem>
+
+</LinearLayout>

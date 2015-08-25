@@ -1,0 +1,8 @@
+<resources>
+    <declare-styleable name="SetingItem">
+        <attr name="itemTitle" format="string|reference" />
+        <attr name="descOn" format="string|reference" />
+        <attr name="descOff" format="string|reference" />
+        <attr name="check" format="boolean" />
+    </declare-styleable>
+</resources>
