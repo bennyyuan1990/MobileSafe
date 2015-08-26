@@ -9,7 +9,7 @@ import android.view.View;
 
 import com.benny.mobilesafe.R;
 
-public class MobileSafeWizard3Activity extends AppCompatActivity {
+public class MobileSafeWizard3Activity extends MobileSafeWizardBaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,16 +17,16 @@ public class MobileSafeWizard3Activity extends AppCompatActivity {
         setContentView(R.layout.activity_mobile_safe_wizard3);
     }
 
-    public  void previousClick(View v){
-
+    @Override
+    public void previousActivity() {
         Intent intent= new Intent(this,MobileSafeWizard2Activity.class);
         startActivity(intent);
-        overridePendingTransition(R.anim.activity_left_in, R.anim.activity_right_out);
     }
 
-    public  void nextClick(View v){
+
+    @Override
+    public void nextActivity() {
         Intent intent= new Intent(this,MobileSafeWizard4Activity.class);
         startActivity(intent);
-        overridePendingTransition(R.anim.activity_right_in, R.anim.activity_left_out);
     }
 }
