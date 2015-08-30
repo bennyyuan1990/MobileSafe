@@ -22,6 +22,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.benny.mobilesafe.R;
+import com.benny.mobilesafe.utils.AssetsUtil;
 import com.benny.mobilesafe.utils.StreamUtil;
 import com.lidroid.xutils.HttpUtils;
 import com.lidroid.xutils.exception.HttpException;
@@ -97,6 +98,7 @@ public class SplashActivity extends AppCompatActivity {
         }
         SharedPreferences sharedPreferences= getSharedPreferences("setting", Context.MODE_PRIVATE);
         boolean autoUpdate=   sharedPreferences.getBoolean("AutoUpdate",false);
+        AssetsUtil.copyAddressBd(this);
         if(autoUpdate) {
             checkUpdate();
         }else {

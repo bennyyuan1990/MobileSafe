@@ -10,8 +10,10 @@
         android:text="4恭喜您，设置完成" />
 
      <CheckBox
+         android:id="@+id/ck_Protect"
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
+         style="@style/ContentText"
          android:text="你没有开启防盗保护"/>
 
     <LinearLayout

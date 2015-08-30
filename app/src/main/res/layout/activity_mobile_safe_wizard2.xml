@@ -23,7 +23,7 @@
         android:text="下次启动手机如果发现SIM卡变化就会发送报警短信" />
 
     <com.benny.mobilesafe.view.SetingItem
-        android:id="@+id/mv_autoUpdate"
+        android:id="@+id/mv_bindSim"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         my:itemTitle="点击绑定SIM卡"

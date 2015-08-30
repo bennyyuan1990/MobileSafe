@@ -16,4 +16,6 @@
     <string name="title_activity_mobile_safe_wizard3">MobileSafeWizard3Activity</string>
     <string name="title_activity_mobile_safe_wizard4">MobileSafeWizard4Activity</string>
     <string name="title_activity_mobile_safe">MobileSafeActivity</string>
+    <string name="title_activity_tool">ToolActivity</string>
+    <string name="title_activity_phone_address">PhoneAddressActivity</string>
 </resources>

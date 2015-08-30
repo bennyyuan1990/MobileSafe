@@ -81,6 +81,9 @@ public class HomeActivity extends AppCompatActivity {
                     case 8: //设置中心
                         enterSettingActivity();
                         break;
+                    case  7:
+                        enterToolActivity();
+                        break;
 
 
                     case 0:
@@ -90,6 +93,16 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+
+    /**
+     * 进入高级工具
+     */
+    private  void enterToolActivity()
+    {
+        Intent intent = new Intent(this,ToolActivity.class);
+        startActivity(intent);
     }
 
 

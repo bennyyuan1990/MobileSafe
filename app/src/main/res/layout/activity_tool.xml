@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/ActivityTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="高级工具" />
+
+    <TextView
+        android:id="@+id/tv_PhoneLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/camera"
+        android:textSize="26sp"
+        android:background="@drawable/btn_shape"
+        android:drawablePadding="10dp"
+        android:layout_margin="10dp"
+        android:text="归属地查询" />
+</LinearLayout>
