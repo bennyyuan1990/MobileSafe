@@ -1,23 +1,42 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:my="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    xmlns:my="http://schemas.android.com/apk/res-auto">
+    android:orientation="vertical">
 
     <TextView
+        style="@style/ActivityTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/ActivityTitle"
-        android:text="系统设置"/>
+        android:text="系统设置" />
 
     <com.benny.mobilesafe.view.SetingItem
         android:id="@+id/mv_autoUpdate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        my:itemTitle="自动更新"
+        my:descOff="自动更新关闭"
         my:descOn="自动更新打开"
-        my:descOff="自动更新关闭">
+        my:itemTitle="自动更新" />
 
-    </com.benny.mobilesafe.view.SetingItem>
+    <com.benny.mobilesafe.view.SetingItem
+        android:id="@+id/mv_showLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        my:descOff="隐藏归属地"
+        my:descOn="显示归属地"
+        my:itemTitle="号码归属地" />
 
+    <com.benny.mobilesafe.view.SetupItem
+        android:id="@+id/mv_locationStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        my:desc="珍珠白"
+        my:setupIitle="归属地提示样式" />
+
+    <com.benny.mobilesafe.view.SetupItem
+        android:id="@+id/mv_locationSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        my:desc="修改提示框位置"
+        my:setupIitle="归属地提示位置" />
 </LinearLayout>

@@ -18,4 +18,5 @@
     <string name="title_activity_mobile_safe">MobileSafeActivity</string>
     <string name="title_activity_tool">ToolActivity</string>
     <string name="title_activity_phone_address">PhoneAddressActivity</string>
+    <string name="title_activity_toast_loaction_setup">ToastLoactionSetupActivity</string>
 </resources>

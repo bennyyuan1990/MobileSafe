@@ -5,4 +5,9 @@
         <attr name="descOff" format="string|reference" />
         <attr name="check" format="boolean" />
     </declare-styleable>
+
+    <declare-styleable name="SetupItem">
+        <attr name="setupIitle" format="string|reference" />
+        <attr name="desc" format="string|reference" />
+    </declare-styleable>
 </resources>

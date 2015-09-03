@@ -5,17 +5,19 @@
     android:versionName="1.0" >
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="ANDROID.PERMISSION.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="ANDROID.PERMISSION.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="ANDROID.PERMISSION.READ_SMS" />
-    <uses-permission android:name="ANDROID.PERMISSION.SEND_SMS" />
-    <uses-permission android:name="ANDROID.PERMISSION.RECEIVE_SMS" />
-    <uses-permission android:name="ANDROID.PERMISSION.RECEIVE_MMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_MMS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <application
         android:allowBackup="true"
@@ -52,6 +54,14 @@
         <activity
             android:name=".activity.MobileSafeActivity"
             android:label="@string/title_activity_mobile_safe" />
+        <activity
+            android:name=".activity.ToolActivity"
+            android:label="@string/title_activity_tool" >
+        </activity>
+        <activity
+            android:name=".activity.PhoneAddressActivity"
+            android:label="@string/title_activity_phone_address" >
+        </activity>
 
         <receiver android:name=".receiver.BootCompletedReceiver" >
             <intent-filter>
@@ -64,13 +74,16 @@
             </intent-filter>
         </receiver>
 
+        <service
+            android:name=".service.PhoneService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+
         <activity
-            android:name=".activity.ToolActivity"
-            android:label="@string/title_activity_tool" >
-        </activity>
-        <activity
-            android:name=".activity.PhoneAddressActivity"
-            android:label="@string/title_activity_phone_address" >
+            android:name=".activity.ToastLoactionSetupActivity"
+            android:label="@string/title_activity_toast_loaction_setup">
+            <!--android:theme="@android:style/Theme.Translucent.NoTitleBar" >-->
         </activity>
     </application>
 
